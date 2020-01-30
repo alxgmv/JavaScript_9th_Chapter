@@ -1,0 +1,7 @@
+.main_list {
+  text-decoration: none;
+}
+
+.main_list_onclick {
+  text-decoration: line-through;
+}
