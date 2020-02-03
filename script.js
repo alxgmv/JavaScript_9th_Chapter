@@ -11,9 +11,19 @@ btn.addEventListener('click', function() {
     alert('Empty input!')
   }
 })
-// for ( i = 0; i < content.children.length; i++ ) {
-//   let elements = document.querySelector('.content');
-//   elements.children.innerText.onclick = function() {
-//     elements.children[i].classList.toggle('main_list_onclick');
-//   }
-// }
+let crossedLi;
+let list = document.querySelector('ol');
+list.onclick = function (event) {
+  let target = event.target;
+  crossed(target);
+};
+function crossed(li) {
+  crossedLi = li;
+  if (crossedLi) {
+    crossedLi.classList.toggle('main_list_onclick')
+    // crossedLi.classList.add('main_list');
+  } else {
+    // crossedLi.classList.remove('main_list')
+    crossedLi.classList.toggle('main_list_onclick');
+  }
+}
