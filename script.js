@@ -4,7 +4,7 @@ btn.addEventListener('click', function() {
   let newTask = document.querySelector('input').value;
   if (newTask != '') {
     let liNew = document.createElement('li');
-    liNew.innerText = newTask;
+    liNew.textContent = newTask;
     console.log(liNew);
     content.appendChild(liNew);
   } else {
