@@ -11,19 +11,8 @@ btn.addEventListener('click', function() {
     alert('Empty input!')
   }
 })
-let crossedLi;
 let list = document.querySelector('ol');
 list.onclick = function (event) {
   let target = event.target;
-  crossed(target);
+  target.classList.toggle('main_list_onclick');
 };
-function crossed(li) {
-  crossedLi = li;
-  if (crossedLi) {
-    crossedLi.classList.toggle('main_list_onclick')
-    // crossedLi.classList.add('main_list');
-  } else {
-    // crossedLi.classList.remove('main_list')
-    crossedLi.classList.toggle('main_list_onclick');
-  }
-}
