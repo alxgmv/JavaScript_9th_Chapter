@@ -12,7 +12,7 @@ btn.addEventListener('click', function() {
   }
 })
 let list = document.querySelector('ol');
-list.onclick = function (event) {
+list.addEventListener('click',function () {
   let target = event.target;
   target.classList.toggle('main_list_onclick');
-};
+});
